@@ -30,3 +30,14 @@ sdc                           8:32   0  2.5G  0 disk
 │   └─vol_grp1-logical_vol0 253:2    0  100M  0 lvm   /tmp
 └─sdc2                        8:34   0  511M  0 part
   └─md0                       9:0    0 1018M  0 raid0
+
+## 18. 
+vagrant@vagrant:~$ cat /proc/mdstat
+Personalities : [linear] [multipath] [raid0] [raid1] [raid6] [raid5] [raid4] [raid10]
+md0 : active raid0 sdc2[1] sdb2[0]
+      1042432 blocks super 1.2 512k chunks
+
+md1 : active raid1 sdc1[1] sdb1[0]
+      2094080 blocks super 1.2 [2/2] [UU]
+
+unused devices: <none>
